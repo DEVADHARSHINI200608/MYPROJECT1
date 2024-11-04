@@ -1,13 +1,13 @@
-import random
+import random # imports the random module
 import streamlit as st
 import base64
 
-def initialize_game():
-    st.session_state.number_to_guess = random.randint(1, 10)
+def initialize_game():# responsible for initialising the game when user press play again
+    st.session_state.number_to_guess = random.randint(1, 10)# assigns random integer between 1 to 10
     st.session_state.attempts = 0
     st.session_state.guessed_correctly = False
 
-def abc():
+def abc():#it is the main function  "_name_"
     # Initialize session state variables
     if 'number_to_guess' not in st.session_state or 'attempts' not in st.session_state or 'guessed_correctly' not in st.session_state:
         initialize_game()

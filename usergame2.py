@@ -6,7 +6,7 @@ def initialize_game():
     st.session_state.high = 100
     st.session_state.mid = (st.session_state.low + st.session_state.high) // 2
     st.session_state.react = ''
-    st.session_state.num1 = 0
+    st.session_state.num1 = 0 #attempts
     st.session_state.guessed = False
 
 def bcd():
@@ -15,7 +15,7 @@ def bcd():
 
     st.title("Guess the Number Game")
 
-    if st.session_state.guessed:
+    if st.session_state.guessed: # since it is boolean values , it need not to be checked
         st.write(f"Yay! I guessed it. Your number is {st.session_state.mid}.")
         st.write(f"We found the output in {st.session_state.num1} attempts.")
         st.title("I WON !!!!!!!")
